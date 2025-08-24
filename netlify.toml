@@ -2,6 +2,14 @@
   publish = "dist/macknight-publications"
   command = "npm ci && npm run build"
 
+[build.environment]
+  NODE_VERSION = "18"
+
+# Disable Angular runtime plugin
+[[plugins]]
+  package = "@netlify/plugin-angular"
+  disabled = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

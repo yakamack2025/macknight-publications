@@ -1,6 +1,6 @@
 [build]
-  publish = "netlify-light"
-  command = "npm run build && cp src/mp-favicon.svg dist/macknight-publications/ && mkdir -p netlify-light && cp -r dist/macknight-publications/browser/* netlify-light/ 2>/dev/null || cp -r dist/macknight-publications/* netlify-light/ && cp -r public/assets/images netlify-light/assets/"
+  publish = "dist/macknight-publications"
+  command = "npm ci && npm run build"
 
 [[redirects]]
   from = "/*"

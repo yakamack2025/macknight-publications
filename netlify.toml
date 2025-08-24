@@ -1,6 +1,6 @@
 [build]
-  publish = "dist/macknight-publications/browser"
-  command = "npm run build"
+  publish = "fixed-deploy"
+  command = "npm run build && npm run deploy:setup"
 
 [[redirects]]
   from = "/*"

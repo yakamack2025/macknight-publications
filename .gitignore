@@ -40,3 +40,7 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+fixed-deploy/
+netlify-deploy/
+public/assets/ebooks/*.epub
+public/assets/ebooks/*.original

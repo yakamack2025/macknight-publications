@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "deploy:setup": "cp src/mp-favicon.svg dist/macknight-publications/ && mkdir -p dist/macknight-publications/assets/ebooks && cp public/assets/ebooks/* dist/macknight-publications/assets/ebooks/ 2>/dev/null || true && rm -rf fixed-deploy/* && cp -r dist/macknight-publications/browser/* fixed-deploy/ 2>/dev/null || cp -r dist/macknight-publications/* fixed-deploy/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

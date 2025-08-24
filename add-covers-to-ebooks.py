@@ -55,6 +55,7 @@ EBOOK_COVER_MAPPING = {
     'leaves-of-grass.epub': 'leavesGrass.png',
     'common-sense.epub': 'commonSense.png',
     'federalist-papers.epub': 'fedsPaper.png',
+    'faust.epub': 'faust.png',
     'confessions.epub': 'confessions.png',
     'analects.epub': 'analects.png',
     'principia.epub': 'principMath.png',

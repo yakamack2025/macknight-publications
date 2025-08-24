@@ -2214,6 +2214,56 @@ export class BooksService {
             { category: "Political Science", score: 100, description: "Classic text of democratic theory", maxScore: 100 }
           ]
         }
+      },
+      {
+        id: 51,
+        title: "Faust",
+        author: "Johann Wolfgang von Goethe",
+        yearPublished: 1808,
+        genre: "Drama/Poetry",
+        overview: "Goethe's masterpiece about a scholar who makes a pact with the devil, exploring themes of knowledge, desire, and the human condition.",
+        summary: "The legendary tale of Dr. Faust, who sells his soul to Mephistopheles in exchange for unlimited knowledge and worldly pleasures. Part I follows Faust's seduction of Gretchen, while Part II expands to cosmic themes of striving, redemption, and human destiny.",
+        significance: "One of the greatest works of German literature and world drama. It has profoundly influenced literature, philosophy, psychology, and popular culture for over 200 years, inspiring countless adaptations and interpretations.",
+        keyThemes: ["Knowledge vs. Wisdom", "Good vs. Evil", "Temptation", "Redemption", "Human Striving", "The Faustian Bargain"],
+        coverImageUrl: "assets/images/faust.png",
+        ebookUrl: "assets/ebooks/faust.epub",
+        ebookFormat: "epub" as const,
+        gutenbergUrl: "https://www.gutenberg.org/ebooks/14591",
+        publicDomain: true,
+        copyrightStatus: "Public Domain (19th century work)",
+        rank: 51,
+        infographicData: {
+          keyStats: [
+            { label: "Parts", value: "2", icon: "book", color: "#8B4513" },
+            { label: "Years Written", value: "60", icon: "calendar", color: "#4A90E2" },
+            { label: "Lines", value: "12,111", icon: "library", color: "#7B68EE" },
+            { label: "Adaptations", value: "200+", icon: "globe", color: "#20B2AA" }
+          ],
+          timeline: [
+            { year: 1749, event: "Goethe born in Frankfurt", importance: "high" },
+            { year: 1772, event: "First sketches of Faust", importance: "high" },
+            { year: 1808, event: "Faust Part I published", importance: "high" },
+            { year: 1832, event: "Faust Part II completed", importance: "high" }
+          ],
+          themes: [
+            { theme: "Knowledge & Power", weight: 95, color: "#FF6B6B", description: "The pursuit of ultimate knowledge and its consequences" },
+            { theme: "Good vs. Evil", weight: 90, color: "#4ECDC4", description: "The eternal struggle between light and darkness" },
+            { theme: "Redemption", weight: 85, color: "#45B7D1", description: "The possibility of salvation through striving" },
+            { theme: "Love & Tragedy", weight: 80, color: "#96CEB4", description: "The Gretchen tragedy in Part I" },
+            { theme: "Human Ambition", weight: 88, color: "#FFEAA7", description: "The drive to transcend human limitations" }
+          ],
+          impact: [
+            { category: "Literature", score: 98, description: "Defined German Romanticism and influenced world literature", maxScore: 100 },
+            { category: "Philosophy", score: 92, description: "Explored fundamental questions of human existence", maxScore: 100 },
+            { category: "Psychology", score: 85, description: "Early insights into human psychology and motivation", maxScore: 100 },
+            { category: "Popular Culture", score: 95, description: "The 'Faustian bargain' became part of common language", maxScore: 100 }
+          ],
+          quotes: [
+            { text: "Two souls, alas, dwell in my breast.", context: "Faust's internal conflict", significance: "Represents the duality of human nature" },
+            { text: "He who strives on and lives to strive / Can earn redemption still.", context: "The angels' final judgment", significance: "The theme of redemption through effort" },
+            { text: "The deed is everything, the glory nothing.", context: "Faust's philosophy", significance: "Emphasis on action over reputation" }
+          ]
+        }
       }
     ];
     

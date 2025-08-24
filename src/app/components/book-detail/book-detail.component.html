@@ -1,0 +1,97 @@
+<div class="book-detail" *ngIf="book$ | async as book">
+  <div class="hero-section">
+    <div class="hero-background"></div>
+    <div class="hero-content">
+      <div class="book-info">
+        <div class="rank-display">#{{ book.rank }}</div>
+        <h1 class="book-title">{{ book.title }}</h1>
+        <h2 class="book-author">by {{ book.author }}</h2>
+        <p class="book-year">
+          {{ book.yearPublished > 0 ? book.yearPublished : (-book.yearPublished) + ' BC' }} • {{ book.genre }}
+        </p>
+      </div>
+      <div class="book-cover-large">
+        <img *ngIf="book.coverImageUrl" [src]="book.coverImageUrl" [alt]="book.title">
+        <div *ngIf="!book.coverImageUrl" class="placeholder-cover-large">
+          <div class="cover-text">
+            <div class="cover-title">{{ book.title }}</div>
+            <div class="cover-author">{{ book.author }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-sections">
+    <section class="overview-section">
+      <h3>Overview</h3>
+      <p class="overview-text">{{ book.overview }}</p>
+    </section>
+
+    <section class="summary-section">
+      <h3>Summary</h3>
+      <p class="summary-text">{{ book.summary }}</p>
+    </section>
+
+    <section class="significance-section">
+      <h3>Historical Significance</h3>
+      <p class="significance-text">{{ book.significance }}</p>
+    </section>
+
+    <section class="themes-section">
+      <h3>Key Themes</h3>
+      <div class="themes-grid">
+        <div class="theme-item" *ngFor="let theme of book.keyThemes">
+          {{ theme }}
+        </div>
+      </div>
+    </section>
+
+    <section class="infographic-section">
+      <h3>Visual Analysis</h3>
+      <app-infographic [data]="book.infographicData"></app-infographic>
+    </section>
+
+    <section class="ebook-section">
+      <h3>Digital Edition</h3>
+      <div class="ebook-container">
+        <div class="ebook-info">
+          <div class="public-domain-badge">
+            <span class="badge-icon">📖</span>
+            <div class="badge-text">
+              <strong>Public Domain</strong>
+              <p>{{ book.copyrightStatus }}</p>
+            </div>
+          </div>
+          
+          <div class="ebook-details">
+            <h4>Read Online or Download</h4>
+            <p>This classic work is available in multiple formats for your reading pleasure.</p>
+            
+            <div class="ebook-actions">
+              <button class="ebook-btn primary" (click)="readOnline(book)">
+                📱 Read Online
+              </button>
+              <button class="ebook-btn secondary" (click)="downloadEbook(book)">
+                📥 Download eBook
+              </button>
+            </div>
+            
+            <div class="format-info">
+              <small>Available from Project Gutenberg in multiple formats (EPUB, Kindle, PDF, HTML). Compatible with all e-readers and devices.</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="media-section" *ngIf="book.audioUrl || book.videoUrl">
+      <h3>Media</h3>
+      <app-media-player [audioUrl]="book.audioUrl" [videoUrl]="book.videoUrl"></app-media-player>
+    </section>
+  </div>
+
+  <div class="navigation">
+    <button class="nav-button" routerLink="/">← Back to Collection</button>
+  </div>
+</div>

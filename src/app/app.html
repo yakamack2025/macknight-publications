@@ -1,0 +1,132 @@
+<div class="app-container">
+  <!-- Header -->
+  <header class="main-header">
+    <div class="header-content">
+      <div class="brand-section">
+        <div class="brand-icon">📚</div>
+        <div class="brand-info">
+          <h1 class="brand-title">Macknight Publications</h1>
+          <p class="brand-subtitle">Digital Light in a Darkening World</p>
+        </div>
+      </div>
+      
+      <nav class="main-nav">
+        <a routerLink="/" class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          Collection
+        </a>
+        <a routerLink="/about" class="nav-link" routerLinkActive="active">About</a>
+      </nav>
+      
+      <div class="header-actions">
+        <!-- Theme toggle removed - using dark theme -->
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (shown only on home page) -->
+  <section class="hero-section" *ngIf="router.url === '/'">
+    <div class="hero-background">
+      <div class="hero-particles"></div>
+      <div class="mythological-elements">
+        <div class="element apollo">☀️</div>
+        <div class="element athena">🦉</div>
+        <div class="element hermes">⚡</div>
+        <div class="element muse">🎭</div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="hero-text">
+        <h2 class="hero-title">50 Profoundly Influential Books</h2>
+        <p class="hero-description">
+          Discover the literary works that have shaped human civilization. 
+          From ancient philosophy to sacred texts, explore the ideas that illuminate our world.
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">50</span>
+            <span class="stat-label">Influential Works</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">2400+</span>
+            <span class="stat-label">Years of Wisdom</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">∞</span>
+            <span class="stat-label">Impact</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="floating-books">
+          <div class="book-spine book-1">The Republic</div>
+          <div class="book-spine book-2">The Bible</div>
+          <div class="book-spine book-3">Divine Comedy</div>
+          <div class="book-spine book-4">The Odyssey</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <router-outlet></router-outlet>
+  </main>
+
+  <!-- Footer -->
+  <footer class="main-footer" id="about">
+    <div class="footer-content">
+      <div class="footer-section brand-section">
+        <div class="footer-brand">
+          <div class="brand-icon">📚</div>
+          <div class="brand-info">
+            <h3>MacKnight Publications</h3>
+            <p>Digital Light in a Darkening World</p>
+          </div>
+        </div>
+        <p class="footer-description">
+          In our digital age overwhelmed by fleeting content and endless noise, 
+          MacKnight Publications stands as a beacon of enduring wisdom. We believe 
+          that in this flood of darkness, one must turn to the classics - the timeless 
+          works that have guided humanity through its greatest challenges and triumphs.
+        </p>
+        <p class="footer-description">
+          Through interactive experiences and scholarly analysis, we illuminate the 
+          50 most influential books ever written, preserving their wisdom for future generations.
+        </p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Literary Heritage</h4>
+        <ul class="footer-links">
+          <li><a href="#philosophy">Ancient Philosophy</a></li>
+          <li><a href="#religion">Sacred Texts</a></li>
+          <li><a href="#classics">Classical Literature</a></li>
+          <li><a href="#poetry">The Classics</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Features</h4>
+        <ul class="footer-links">
+          <li><a href="#infographics">Interactive Infographics</a></li>
+          <li><a href="#audio">Audio Content</a></li>
+          <li><a href="#video">Video Analysis</a></li>
+          <li><a href="#analysis">Book Analysis</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <div class="contact-info">
+          <p><strong>Michael Allen Ackerman</strong></p>
+          <p>📧 <a href="mailto:michael@macknightpublications.org">michael@macknightpublications.org</a></p>
+        </div>
+        <p class="copyright">
+         Copyright © 2025 MacKnight Publications. Preserving wisdom for future generations.
+        </p>
+      </div>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,206 @@
+.book-card {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  border: 2px solid #52708a;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.mp-brand {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, #8B4513, #DAA520);
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: 'Georgia', serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.book-card:hover .mp-brand {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.book-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #8B4513, #DAA520, #CD853F);
+}
+
+.book-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  border-color: #f39c12;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.rank-badge {
+  background: linear-gradient(45deg, #8B4513, #A0522D);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.book-cover {
+  width: 140px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder-cover {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #8B4513, #A0522D, #CD853F);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.book-spine {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  color: #f5f4e8;
+  font-size: 11px;
+  text-align: center;
+  padding: 8px;
+  font-weight: bold;
+}
+
+.title-text {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.author-text {
+  font-size: 6px;
+  opacity: 0.8;
+}
+
+.card-content {
+  text-align: left;
+}
+
+.book-title {
+  font-family: 'Georgia', serif;
+  font-size: 1.4rem;
+  color: #ecf0f1;
+  margin-bottom: 8px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.book-author {
+  font-style: italic;
+  color: #f39c12;
+  margin-bottom: 4px;
+  font-size: 1rem;
+}
+
+.book-year {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.book-overview {
+  color: #bdc3c7;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.themes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.theme-tag {
+  background: linear-gradient(45deg, #4A90E2, #357ABD);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.theme-more {
+  background: #ccc;
+  color: #bdc3c7;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+}
+
+.media-indicators {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.media-icon {
+  font-size: 1.2rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.media-icon:hover {
+  opacity: 1;
+}
+
+[data-theme="dark"] .book-card {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-color: #52708a;
+  color: #ecf0f1;
+}
+
+[data-theme="dark"] .book-title {
+  color: #ecf0f1;
+}
+
+[data-theme="dark"] .book-author {
+  color: #f39c12;
+}
+
+[data-theme="dark"] .book-overview {
+  color: #bdc3c7;
+}
